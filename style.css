@@ -1,0 +1,57 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #000; /* Background color remains black */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 30px;
+    color: #ffd700; /* Changed heading color to gold */
+}
+
+/* Game Grid Setup */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-gap: 15px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Card Styles */
+.card {
+    width: 150px;
+    height: 150px;
+    background-color: #721572; /* Card background color remains purple */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(11, 0, 160); /* Symbols color remains yellow */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card.flipped {
+    background-color: #00c4a3; /* Background color for flipped card remains white */
+}
+
+.card.matched {
+    background-color: #ff0000; /* Matched card color remains red */
+    pointer-events: none;
+}
+
+/* Ensure images fit within the card if used */
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
